@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: client
+    env: static
+    buildCommand: cd client && npm install && npm run build
+    staticPublishPath: client/dist
+  - type: web
+    name: server
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    
